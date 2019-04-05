@@ -5,11 +5,11 @@ function addToList(item) {
 
 $(document).on('click','#add-to-list',function () {
     var item = $('#item');
-    item.focus();
     addToList(item.val());
-
+    $(item).val('');
+    item.focus();
+    
     updateTotal();
-
 });
 
 $(document).on('click','.pending', function () {
